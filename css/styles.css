@@ -11964,20 +11964,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@font-face {
-  font-family: "IRANYekanWeb";
-  src: url("../fonts/IRYekanBold.ttf") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "IRANYekanWeb";
-  src: url("../fonts/IRYekan.ttf") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
 *,
 *::before,
 *::after {
@@ -12114,7 +12100,7 @@ input,
 select,
 textarea,
 button {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Vazir;
   outline: 0;
   resize: none;
 }
@@ -12229,8 +12215,8 @@ html {
 }
 
 body {
-  font-family: "IRANYekanWeb", Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-family: Vazir;
+  font-size: 1rem;
   line-height: 1.5;
   color: #333333;
   direction: rtl;
@@ -12668,6 +12654,7 @@ a {
   font-size: 1rem;
   border-radius: 4px;
   text-align: center;
+  border: 1px solid transparent;
   transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
   -ms-transition: all 0.4s ease-out;
@@ -12683,7 +12670,7 @@ a {
 .custom-btn.btn-gold:hover {
   background-color: #0A0E3E;
   color: #ffffff;
-  border: 1px solid #C19463;
+  border-color: #C19463;
 }
 
 .custom-form-group {
@@ -12701,7 +12688,7 @@ a {
   padding: 1rem;
   padding-top: 2rem;
   font-family: inherit;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #666666;
 }
@@ -12867,7 +12854,7 @@ a {
 .immigration__content h1 {
   font-weight: 700;
   color: #333333;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .immigration__content h1::after {
@@ -13008,7 +12995,7 @@ a {
 
 .immigration__slider__item__content .name {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #333333;
   margin-bottom: 0.5rem;
 }
@@ -13081,7 +13068,7 @@ a {
 }
 
 .immigration__slider .owl-nav button span {
-  font-size: 3rem;
+  font-size: 2.8rem;
   padding: 0 0.5rem !important;
 }
 
@@ -13159,6 +13146,7 @@ a {
   text-align: center;
   position: relative;
   top: 50px;
+  font-weight: 800;
   transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
   -ms-transition: all 0.4s ease-out;
@@ -13178,7 +13166,7 @@ a {
 .immigration__contact_us h1 {
   font-weight: 700;
   color: #333333;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .immigration__contact_us p {
