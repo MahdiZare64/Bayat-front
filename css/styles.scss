@@ -135,7 +135,6 @@
   &__wrapper {
     .container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 1rem 0;
 
@@ -164,6 +163,84 @@
             color: $third_color;
           }
         }
+      }
+    }
+  }
+
+  &__before {
+    background-color: #05071f;
+    padding: 0.5rem 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__phone {
+      a {
+        color: $white_color;
+        margin-left: 1rem;
+
+        i {
+          font-size: 1.25rem;
+        }
+
+        &:hover {
+          color: $third_color;
+        }
+      }
+    }
+
+    &__icons {
+      display: flex;
+      justify-content: flex-end;
+
+      &__item {
+        background-color: $third_color;
+        border-radius: 0.5rem;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0.5rem;
+        border: 1px solid transparent;
+        @include transition;
+
+        i {
+          color: $white_color;
+          @include transition;
+        }
+
+        &:hover {
+          background-color: transparent;
+          border-color: $third_color;
+
+          i {
+            color: $third_color;
+          }
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    &__item {
+      margin: 0 0.75rem;
+
+      a {
+        color: $white_color;
+        &:hover {
+          color: $third_color;
+        }
+      }
+
+      &.has-children {
+        
       }
     }
   }
@@ -859,6 +936,5 @@
         }
       }
     }
-
   }
 }

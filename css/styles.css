@@ -12786,9 +12786,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -12822,6 +12819,105 @@ a {
 }
 
 .header nav ul li a:hover {
+  color: #C19463;
+}
+
+.header__before {
+  background-color: #05071f;
+  padding: 0.5rem 0;
+}
+
+.header__before .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.header__before__phone a {
+  color: #ffffff;
+  margin-left: 1rem;
+}
+
+.header__before__phone a i {
+  font-size: 1.25rem;
+}
+
+.header__before__phone a:hover {
+  color: #C19463;
+}
+
+.header__before__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header__before__icons__item {
+  background-color: #C19463;
+  border-radius: 0.5rem;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0.5rem;
+  border: 1px solid transparent;
+  transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+}
+
+.header__before__icons__item i {
+  color: #ffffff;
+  transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+}
+
+.header__before__icons__item:hover {
+  background-color: transparent;
+  border-color: #C19463;
+}
+
+.header__before__icons__item:hover i {
+  color: #C19463;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__menu__item {
+  margin: 0 0.75rem;
+}
+
+.header__menu__item a {
+  color: #ffffff;
+}
+
+.header__menu__item a:hover {
   color: #C19463;
 }
 
