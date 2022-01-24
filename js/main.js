@@ -14,7 +14,10 @@ Bayat.slider.init = function () {
       autoplayHoverPause: true,
       dots: true,
       items: 3,
-      
+      navText: [
+        "<i class='fas fa-angle-right'></i>",
+        "<i class='fas fa-angle-left'></i>",
+      ],
     });
 
     $(".immigration__countries__slider").owlCarousel({
@@ -28,6 +31,37 @@ Bayat.slider.init = function () {
       autoplayHoverPause: true,
       dots: false,
       items: 11,
+    });
+
+    $(".home__reasons__slider").owlCarousel({
+      loop: true,
+      margin: 30,
+      smartSpeed: 700,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      rtl: true,
+      nav: true,
+      autoplayHoverPause: true,
+      dots: false,
+      items: 4,
+      navText: [
+        "<i class='fas fa-angle-right'></i>",
+        "<i class='fas fa-angle-left'></i>",
+      ],
+      
+    });
+
+    $(".home__our_team__slider").owlCarousel({
+      loop: true,
+      margin: 30,
+      smartSpeed: 700,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      rtl: true,
+      nav: false,
+      autoplayHoverPause: true,
+      dots: false,
+      items: 3.5,
     });
   } catch (e) {
     console.log(`Error on Bayat.slider.init - ${e}`);
