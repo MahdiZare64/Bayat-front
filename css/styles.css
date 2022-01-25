@@ -13335,6 +13335,7 @@ a {
   z-index: 2;
   color: #3F458A;
   font-weight: 700;
+  cursor: pointer;
   transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
   -ms-transition: all 0.4s ease-out;
@@ -13461,6 +13462,27 @@ a {
 .immigration__slider__item:hover {
   -webkit-box-shadow: 0px 0px 13px rgba(10, 14, 62, 0.25);
           box-shadow: 0px 0px 13px rgba(10, 14, 62, 0.25);
+}
+
+.immigration__slider__wrapper {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+}
+
+.immigration__slider__wrapper.active-tab {
+  opacity: 1;
+  visibility: visible;
+  max-height: unset;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .immigration__slider .owl-stage-outer {
@@ -13798,6 +13820,10 @@ a {
   margin-bottom: 1.5rem;
   position: relative;
   right: calc(50% - 75px);
+}
+
+.home__news__item {
+  padding-bottom: 0.5rem;
 }
 
 .home__news__item__img {

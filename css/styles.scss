@@ -638,6 +638,7 @@
         z-index: 2;
         color: $blue_color;
         font-weight: 700;
+        cursor: pointer;
         @include transition;
 
         &:hover {
@@ -748,6 +749,21 @@
 
       &:hover {
         box-shadow: 0px 0px 13px rgba(10, 14, 62, 0.25);
+      }
+    }
+
+    &__wrapper {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      transform: translateX(20px);
+      @include transition;
+
+      &.active-tab {
+        opacity: 1;
+        visibility: visible;
+      max-height: unset;
+        transform: translateX(0);
       }
     }
 
@@ -1064,6 +1080,8 @@
     }
 
     &__item {
+      padding-bottom: 0.5rem;
+
       &__img {
         overflow: hidden;
         display: block;

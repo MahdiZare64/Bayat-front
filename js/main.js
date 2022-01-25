@@ -87,6 +87,16 @@ Bayat.sliderTab.init = function () {
           tabWrapper.classList = `immigration__slider__tabs active-${
             (index + 1) % 3
           }`;
+
+          // slider swap
+          const wrapper = tabWrapper.parentElement;
+          const target = item.dataset.target;
+          const activeSlider = wrapper.querySelector("." + target);
+
+          const preActive = wrapper.querySelector(".active-tab");
+          preActive.classList.remove("active-tab");
+          activeSlider.classList.add("active-tab");
+
         });
       });
     }
