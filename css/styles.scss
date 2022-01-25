@@ -71,9 +71,17 @@
     display: block;
     width: 150px;
     height: 3px;
-    background-color: #c19463;
+    background-color: $third_color;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    &::after {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -540,7 +548,7 @@
       height: 45px;
     }
 
-    ul {
+    .mobile-menu {
       position: fixed;
       top: 82.5px;
       height: calc(100vh - 82.5px);
@@ -548,6 +556,7 @@
       background-color: $secondary_color;
       z-index: 9999;
       right: -100%;
+      overflow-y: scroll;
       @include transition;
 
       &.open {
@@ -569,6 +578,40 @@
           }
         }
       }
+    }
+
+    .has-children {
+      position: relative;
+
+      .arrow {
+        color: $white_color;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 41.5px;
+        height: 41.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include transition;
+
+        &.active {
+          color: $third_color;
+          transform: rotate(180deg);
+        }
+      }
+
+      ul {
+        padding-right: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        @include transition;
+
+        &.active {
+          max-height: 1000px;
+        }
+      }
+
     }
   }
 
@@ -695,8 +738,18 @@
       z-index: 2;
     }
 
-    .custom-btn {
+    span {
+      color: $white_color;
+    }
+
+    .immigration-btn {
       display: none;
+    }
+
+    .home-btn {
+      position: relative;
+      z-index: 9;
+      top: 2rem;
     }
 
     &::after {
@@ -743,14 +796,18 @@
           display: block;
           width: 150px;
           height: 3px;
-          background-color: #c19463;
+          background-color: $third_color;
           margin: 0 auto;
           margin-top: 1rem;
           margin-bottom: 1.5rem;
         }
       }
 
-      .custom-btn {
+      span {
+        color: $dark_color;
+      }
+
+      .immigration-btn {
         display: block;
         max-width: 250px;
         margin: 0 auto;
@@ -759,6 +816,29 @@
 
       &::after {
         content: unset;
+      }
+
+      .home-btn {
+        position: unset;
+        display: block;
+        max-width: 230px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        color: $white_color;
+      }
+
+      .long-text {
+        font-size: 1rem;
+        color: $text_color;
+
+        &::after {
+          content: unset;
+        }
+      }
+
+      &.larg_intro {
+        height: unset;
       }
     }
   }
@@ -846,6 +926,10 @@
       p {
         text-align: center;
       }
+
+      .video {
+        margin-top: 1.5rem;
+      }
     }
   }
 
@@ -861,7 +945,7 @@
         display: block;
         width: 150px;
         height: 3px;
-        background-color: #c19463;
+        background-color: $third_color;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
         position: relative;
@@ -1060,7 +1144,7 @@
 
   &__countries {
     &__title {
-      font-size: 1rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: $dark_color;
 
@@ -1069,7 +1153,7 @@
         display: block;
         width: 150px;
         height: 3px;
-        background-color: #c19463;
+        background-color: $third_color;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
       }
@@ -1100,8 +1184,57 @@
           filter: grayscale(0);
         }
 
+        &__item {
+          img {
+            margin-bottom: 1rem;
+          }
+        }
+
         div {
           top: 0;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      &__title {
+        text-align: center;
+        font-size: 1.2rem;
+        max-width: 250px;
+        margin: 0 auto;
+
+        &::after {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      &__item {
+        img {
+          margin-bottom: 1rem;
+          transform: scale(0.75);
+        }
+
+        div {
+          font-size: 1.5rem;
+        }
+      }
+
+      .container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      }
+
+      .center {
+        .immigration__countries__item {
+          img {
+            filter: grayscale(0);
+            transform: scale(1);
+          }
+
+          div {
+            top: 0;
+          }
         }
       }
     }
@@ -1132,6 +1265,21 @@
 
     img {
       border-radius: 1rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+
+        &::after {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
     }
   }
 }
@@ -1169,6 +1317,34 @@
     .row:nth-child(even) {
       flex-direction: row-reverse;
     }
+
+    @media only screen and (max-width: 768px) {
+      &__data {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+
+        h1 {
+          border-right: unset;
+          padding-right: 0;
+          text-align: center;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 150px;
+            height: 3px;
+            background-color: $third_color;
+            margin: 0 auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
   }
 
   &__button {
@@ -1196,6 +1372,18 @@
       color: $white_color;
       font-weight: 500;
       font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .title {
+        padding-right: 0;
+        border-right: 0;
+        text-align: center;
+        width: 100%;
+      }
+      .desc {
+        text-align: center;
+      }
     }
   }
 
@@ -1336,6 +1524,34 @@
       border-right: 2px solid $third_color;
       margin-bottom: 2rem;
     }
+
+    @media only screen and (max-width: 768px) {
+      .title {
+        border-right: 0;
+        padding-right: 0;
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 150px;
+          height: 3px;
+          background-color: #c19463;
+          margin: 0 auto;
+          margin-top: 1rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .d-flex {
+        flex-direction: column;
+
+        img {
+          max-width: 200px;
+          margin: 0 auto;
+        }
+      }
+    }
   }
 
   &__news {
@@ -1350,7 +1566,7 @@
         display: block;
         width: 150px;
         height: 3px;
-        background-color: #c19463;
+        background-color: $third_color;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
         position: relative;
@@ -1394,6 +1610,19 @@
       &:hover {
         img {
           transform: scale(1.2);
+        }
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      &__item {
+        .title,
+        .desc {
+          text-align: center;
+        }
+
+        .custom-btn {
+          margin: 0 auto;
         }
       }
     }

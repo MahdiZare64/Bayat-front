@@ -36,13 +36,26 @@ Bayat.slider.init = function () {
       loop: true,
       margin: 30,
       smartSpeed: 700,
-      autoplay: true,
+      // autoplay: true,
       autoplayTimeout: 3000,
       rtl: true,
       nav: false,
       autoplayHoverPause: true,
       dots: false,
-      items: 11,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 2.3,
+          center: true,
+        },
+        576: {
+          items: 4.5,
+          center: true,
+        },
+        991: {
+          items: 11,
+        },
+      },
     });
 
     $(".home__reasons__slider").owlCarousel({
@@ -55,11 +68,21 @@ Bayat.slider.init = function () {
       nav: true,
       autoplayHoverPause: true,
       dots: false,
-      items: 4,
       navText: [
         "<i class='fas fa-angle-right'></i>",
         "<i class='fas fa-angle-left'></i>",
       ],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        576: {
+          items: 3,
+        },
+        991: {
+          items: 4,
+        },
+      },
     });
 
     $(".home__our_team__slider").owlCarousel({
@@ -72,7 +95,18 @@ Bayat.slider.init = function () {
       nav: false,
       autoplayHoverPause: true,
       dots: false,
-      items: 3.5,
+      responsive: {
+        0: {
+          items: 1.5,
+          stagePadding: 30,
+        },
+        576: {
+          items: 2.5,
+        },
+        991: {
+          items: 3.5,
+        },
+      },
     });
   } catch (e) {
     console.log(`Error on Bayat.slider.init - ${e}`);
@@ -144,6 +178,16 @@ Bayat.fixedHeader.init = function () {
         },
         false
       );
+
+      const arrow = document.querySelectorAll(".mobile-menu .arrow");
+
+      arrow.forEach(function (item) {
+        item.addEventListener("click", function () {
+          const ul = item.parentElement.children;
+          ul[2].classList.toggle("active");
+          item.classList.toggle("active")
+        });
+      });
     }
   } catch (e) {
     console.log(`Error on Bayat.fixedHeader.init - ${e}`);

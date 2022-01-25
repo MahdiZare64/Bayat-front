@@ -192,19 +192,72 @@
             </div>
         </div>
 
+        <div class="header__mobile">
+            <div class="container">
+
+                <div class="menu-button">
+                    <div class="nav-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <a href="#">
+                    <img src="images/logo-sm.svg" alt="">
+                </a>
+
+                <ul class="mobile-menu">
+                    <li><a href="#">درباره ما</a></li>
+                    <li class="has-children">
+                        <a href="#">برنامه کشور ها</a>
+                        <span class="arrow"><i class="fas fa-sort-down"></i></span>
+
+                        <ul>
+                            <li> <a href="#">اخذ تابعیت از طریق سرمایه گذاری</a> </li>
+                            <li class="has-children">
+                                <a href="#">اخذ اقامت</a>
+                                <span class="arrow"><i class="fas fa-sort-down"></i></span>
+
+                                <ul>
+                                    <li><a href="#">اسپانیا</a></li>
+                                    <li><a href="#">پرتغال</a></li>
+                                    <li><a href="#">یونان</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">مهاجرت</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="#">خدمات حقوقی</a></li>
+                    <li><a href="#">تماس با ما</a> </li>
+                    <li><a href="#">رسانه</a></li>
+                </ul>
+            </div>
+        </div>
+
     </header>
 
     <main>
-        <section class="immigration__intro larg_intro" style="background-image: url('../images/judiciary.png')">
+        <section class="immigration__intro larg_intro">
+            <picture>
+                <source media="(max-width:768px)" srcset="../images/judiciary-sm.png">
+                <img src="../images/judiciary.png" class="immigration__intro__img" alt="">
+            </picture>
+
             <div class="container">
                 <h1 class="text-after">
-                    <span class="white-color">
+                    <span>
                         وکلای با تجربه
                     </span>
                     <br>
                     در سطح جهانی</h1>
-                <h3>موسس گروه حقوقی بیات، آقای سام بیات، وکیل دادگستری پایه یک کانادا</h3>
-                <a href="#" class="custom-btn btn-gold">
+                <h3 class="long-text">موسس گروه حقوقی بیات، آقای سام بیات، وکیل دادگستری پایه یک کانادا</h3>
+                <a href="#" class="custom-btn btn-gold px-4 py-3 home-btn">
                     درخواست مشاوره رایگان
                 </a>
             </div>
@@ -213,7 +266,7 @@
         <section class="immigration__content wrapper">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                         <h1>
                             خلق آینده روشن برای شما، اولویت ماست
 
@@ -246,9 +299,9 @@
                             برای تمام افراد در نظر نگیریم.
                         </p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <div class="video">
-                            <iframe width="385" height="230" src="https://www.youtube.com/embed/QsRt0f8b14Q"
+                            <iframe width="100%" height="230" src="https://www.youtube.com/embed/QsRt0f8b14Q"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen=""></iframe>
@@ -284,10 +337,10 @@
         <section class="home__content gray-bg">
 
             <div class="row">
-                <div class="col-6 home__content__img">
+                <div class="col-12 col-md-6 home__content__img">
                     <img src="images/data-img-1.png" alt="">
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="container home__content__data">
                         <h1>
                             انتقال کسب‌وکار <br>
@@ -310,10 +363,10 @@
             </div>
 
             <div class="row">
-                <div class="col-6 home__content__img">
+                <div class="col-12 col-md-6 home__content__img">
                     <img src="images/data-img-2.png" alt="">
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="container home__content__data">
                         <h1>
                             ویزای غیرمهارجتی
@@ -335,10 +388,10 @@
             </div>
 
             <div class="row">
-                <div class="col-6 home__content__img">
+                <div class="col-12 col-md-6 home__content__img">
                     <img src="images/data-img-3.png" alt="">
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="container home__content__data">
                         <h1>
                             ویزا از طریق خرید <br>
@@ -362,16 +415,16 @@
 
         </section>
 
-        <section class="home__button wrapper">
+        <section class="home__button wrapper gray-bg-md">
             <a href="#" class="custom-btn btn-outline px-5 py-3">
-                مشاهده همه خدمات گروه بایت
+                مشاهده همه خدمات گروه بیات
             </a>
         </section>
 
         <section class="home__special wrapper">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-6 d-flex">
+                    <div class="col-12 col-md-6 d-flex">
                         <h1 class="title">
                             بیش از ۳۰،۰۰۰ <br>
                             <span class="fw-500">
@@ -380,7 +433,7 @@
                         </h1>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <p class="desc">
                             گروه بیات یک شرکت حقوقی است که بیش از 28 سال در زمینه مهاجرت از طریق سرمایه‌گذاری، تابعیت
                             اقتصادی و راه اندازی کسب و کار جهت اخذ تابعیت یا اقامت تخصص دارد. این شرکت با شبکه گسترده ای
@@ -1101,11 +1154,11 @@
         <section class="home__our_team wrapper">
             <div class="row">
 
-                <div class="col-3 d-flex flex-column justify-content-center">
+                <div class="col-12 col-md-3 d-flex flex-column justify-content-center">
                     <div class="container text-center">
 
                         <h1 class="title">با تیم ما آشنا شوید.</h1>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-none d-md-flex justify-content-center">
                             <a href="#" class="custom-btn btn-gold px-4 py-2 white-color">
                                 اطلاعات بیشتر درباره ما
                             </a>
@@ -1113,7 +1166,7 @@
                     </div>
                 </div>
 
-                <div class="col-9">
+                <div class="col-12 col-md-9">
 
                     <div class="home__our_team__slider owl-carousel owl-theme has-dots has-nav">
 
@@ -1162,17 +1215,24 @@
                     </div>
 
                 </div>
+
+                <div class="col-12 d-flex d-md-none justify-content-center mt-4">
+                    <a href="#" class="custom-btn btn-gold px-4 py-3 white-color">
+                        اطلاعات بیشتر درباره ما
+                    </a>
+                </div>
+
             </div>
         </section>
 
         <section class="home__media wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-3 d-flex flex-column justify-content-center">
+                    <div class="col-12 col-md-3 d-flex flex-column justify-content-center">
                         <h1 class="title">گروه بیات در رسانه ها</h1>
                     </div>
 
-                    <div class="col-9 d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-9 d-flex justify-content-center align-items-center">
 
                         <a href="#">
                             <img src="images/media-1.png" alt="">
@@ -1195,10 +1255,10 @@
             </div>
         </section>
 
-        <section class="immigration__contact_us wrapper gray-bg">
+        <section class="immigration__contact_us wrapper gray-bg-md">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <h1>ثبت درخواست مشاوره رایگان</h1>
                         <p>برای درخواست مشاوره فرم زیر را تکمیل فرمایید. مشاورین ما در اسرع وقت با شما تماس خواهند گرفت.
                         </p>
@@ -1226,14 +1286,14 @@
                                     </div>
                                 </div>
 
-                                <div class="col-6">
+                                <div class="col-12 col-md-6">
                                     <div class="custom-form-group">
                                         <label for="phone">شماره تماس</label>
                                         <input type="text" id="phone">
                                     </div>
                                 </div>
 
-                                <div class="col-6">
+                                <div class="col-12 col-md-6">
                                     <div class="custom-form-group">
                                         <label for="email">ایمیل</label>
                                         <input type="text" id="email">
@@ -1256,7 +1316,7 @@
                         </form>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-6 d-none d-md-block">
                         <img src="images/map.png" alt="">
                     </div>
                 </div>
