@@ -1,11 +1,11 @@
 $white_color: #ffffff;
 $dark_color: #333333;
 $text_color: #808080;
-$gray_color: #EDEDED;
-$primary_color: #0A0E3E;
-$secondary_color: #080C33;
-$third_color: #C19463;
-$blue_color: #3F458A;
+$gray_color: #ededed;
+$primary_color: #0a0e3e;
+$secondary_color: #080c33;
+$third_color: #c19463;
+$blue_color: #3f458a;
 //colors
 
 @mixin transition($duration: 0.4s, $mode: ease-out) {
@@ -229,6 +229,16 @@ section {
   &.gray-bg {
     background-color: $gray_color;
   }
+
+  @media only screen and (max-width: 768px) {
+    &.gray-bg-md {
+      background-color: $gray_color;
+    }
+
+    &.white-bg-md {
+      background-color: $white_color;
+    }
+  }
 }
 
 ::selection {
@@ -316,6 +326,13 @@ body {
     @include transition($duration: 0.2s);
     &:hover {
       color: $third_color;
+    }
+  }
+
+  &.no-scroll {
+    @media only screen and (max-width: 768px) {
+      max-height: 100vh;
+      overflow: hidden;
     }
   }
 }
@@ -809,4 +826,13 @@ a {
   &::after {
     content: unset !important;
   }
+}
+
+.owl-item {
+  touch-action: auto !important;
+  -ms-touch-action: auto !important;
+  touch-action: auto !important;
+  user-select: auto !important;
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
 }

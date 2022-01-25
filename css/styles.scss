@@ -127,6 +127,14 @@
       }
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    &.has-nav {
+      .owl-nav {
+        display: none !important;
+      }
+    }
+  }
 }
 
 .header {
@@ -408,6 +416,175 @@
       display: block;
     }
   }
+
+  &__mobile {
+    display: none;
+    padding: 1rem 0;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .menu-button {
+      display: block;
+      font-size: 1.75rem;
+      margin: 0 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.25rem;
+      position: absolute;
+      right: 1rem;
+      top: calc(50% - 19px);
+
+      .nav-icon {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        transform: rotate(0deg);
+        @include transition;
+        cursor: pointer;
+
+        span {
+          display: block;
+          position: absolute;
+          height: 5px;
+          width: 50%;
+          background: $third_color;
+          opacity: 1;
+          transform: rotate(0deg);
+          @include transition;
+
+          &:nth-child(even) {
+            left: 48%;
+            border-radius: 0 5px 5px 0;
+          }
+
+          &:nth-child(odd) {
+            left: 0px;
+            border-radius: 5px 0 0 5px;
+          }
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            top: 0px;
+          }
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            top: 12px;
+          }
+
+          &:nth-child(5),
+          &:nth-child(6) {
+            top: 24px;
+          }
+        }
+
+        &.open {
+          span {
+            &:nth-child(1),
+            &:nth-child(6) {
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+
+            &:nth-child(2),
+            &:nth-child(5) {
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+            }
+
+            &:nth-child(1) {
+              left: 5px;
+              top: 10px;
+            }
+
+            &:nth-child(2) {
+              left: calc(50% - 5px);
+              top: 10px;
+            }
+
+            &:nth-child(3) {
+              left: -50%;
+              opacity: 0;
+            }
+
+            &:nth-child(4) {
+              left: 100%;
+              opacity: 0;
+            }
+
+            &:nth-child(5) {
+              left: 5px;
+              top: 15px;
+            }
+
+            &:nth-child(6) {
+              left: calc(50% - 5px);
+              top: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      width: 45px;
+      height: 45px;
+    }
+
+    ul {
+      position: fixed;
+      top: 82.5px;
+      height: calc(100vh - 82.5px);
+      width: 250px;
+      background-color: $secondary_color;
+      z-index: 9999;
+      right: -100%;
+      @include transition;
+
+      &.open {
+        right: 0;
+      }
+
+      li {
+        a {
+          display: block;
+          padding: 0.6rem 1rem;
+          color: $white_color;
+
+          border-bottom: 1px solid rgba($third_color, 0.4);
+        }
+
+        &:last-of-type {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    &__wrapper,
+    nav,
+    &__before,
+    &__menu,
+    &__fixed {
+      display: none;
+    }
+
+    &__mobile {
+      display: block;
+    }
+  }
 }
 
 .bg {
@@ -495,9 +672,14 @@
     position: relative;
     padding-top: 8rem;
     padding-bottom: 5rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+    &__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     h1 {
       color: $third_color;
@@ -505,11 +687,16 @@
       position: relative;
       z-index: 2;
     }
+
     h3 {
       color: $white_color;
       font-weight: 500;
       position: relative;
       z-index: 2;
+    }
+
+    .custom-btn {
+      display: none;
     }
 
     &::after {
@@ -530,6 +717,49 @@
 
     &.larg_intro {
       height: 560px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding: 0;
+
+      &__img {
+        position: unset;
+        height: 280px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        color: $dark_color;
+        text-align: center;
+        max-width: 230px;
+        margin: 0 auto;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 150px;
+          height: 3px;
+          background-color: #c19463;
+          margin: 0 auto;
+          margin-top: 1rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .custom-btn {
+        display: block;
+        max-width: 250px;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+      }
+
+      &::after {
+        content: unset;
+      }
     }
   }
 
@@ -594,8 +824,28 @@
     .video {
       border-radius: 1rem;
       overflow: hidden;
-      width: 385px;
-      height: 230px;
+      width: 100%;
+      height: auto;
+
+      iframe {
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      h1 {
+        text-align: center;
+
+        &::after {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      p {
+        text-align: center;
+      }
     }
   }
 
@@ -762,7 +1012,7 @@
       &.active-tab {
         opacity: 1;
         visibility: visible;
-      max-height: unset;
+        max-height: unset;
         transform: translateX(0);
       }
     }
@@ -775,6 +1025,35 @@
       .immigration__slider__item,
       .immigration__slider__tabs {
         background-color: $white_color;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      &__tabs {
+        display: none;
+      }
+
+      &__item {
+        &__content {
+          .key,
+          .value {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      &.gray-bg-md {
+        .immigration__slider__item,
+        .immigration__slider__tabs {
+          background-color: $white_color;
+        }
+      }
+
+      &.white-bg-md {
+        .immigration__slider__item,
+        .immigration__slider__tabs {
+          background-color: $gray_color;
+        }
       }
     }
   }
@@ -1117,6 +1396,14 @@
           transform: scale(1.2);
         }
       }
+    }
+  }
+}
+
+.footer-right-panel {
+  @media only screen and (max-width: 768px) {
+    & > .nav-item {
+      margin-bottom: 1rem;
     }
   }
 }

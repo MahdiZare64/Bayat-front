@@ -18,6 +18,18 @@ Bayat.slider.init = function () {
         "<i class='fas fa-angle-right'></i>",
         "<i class='fas fa-angle-left'></i>",
       ],
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        576: {
+          items: 2,
+        },
+        991: {
+          items: 3,
+        },
+      },
     });
 
     $(".immigration__countries__slider").owlCarousel({
@@ -96,7 +108,6 @@ Bayat.sliderTab.init = function () {
           const preActive = wrapper.querySelector(".active-tab");
           preActive.classList.remove("active-tab");
           activeSlider.classList.add("active-tab");
-
         });
       });
     }
@@ -139,8 +150,26 @@ Bayat.fixedHeader.init = function () {
   }
 };
 
+Bayat.header = Bayat.header || {};
+Bayat.header.init = function () {
+  try {
+    const btn = document.querySelector(".menu-button");
+
+    if (btn) {
+      btn.addEventListener("click", function () {
+        btn.querySelector(".nav-icon").classList.toggle("open");
+        document.querySelector(".header__mobile ul").classList.toggle("open");
+        document.querySelector("body").classList.toggle("no-scroll");
+      });
+    }
+  } catch (e) {
+    console.log(`Error on Bayat.header.init - ${e}`);
+  }
+};
+
 window.addEventListener("DOMContentLoaded", function () {
   Bayat.slider.init();
   Bayat.sliderTab.init();
   Bayat.fixedHeader.init();
+  Bayat.header.init();
 });
