@@ -48,7 +48,6 @@ Bayat.slider.init = function () {
         "<i class='fas fa-angle-right'></i>",
         "<i class='fas fa-angle-left'></i>",
       ],
-      
     });
 
     $(".home__our_team__slider").owlCarousel({
@@ -96,7 +95,42 @@ Bayat.sliderTab.init = function () {
   }
 };
 
+Bayat.fixedHeader = Bayat.fixedHeader || {};
+Bayat.fixedHeader.init = function () {
+  try {
+    const header = document.querySelector(".home__header");
+
+    if (header) {
+      window.addEventListener(
+        "scroll",
+        function () {
+          var st = window.pageYOffset || document.documentElement.scrollTop;
+          if (st > 1000) {
+            if (!header.classList.contains("header__fixed")) {
+              header.classList.add("header__fixed");
+              setTimeout(function () {
+                header.classList.add("header__fixed__shown");
+              }, 500);
+            }
+          } else {
+            if (header.classList.contains("header__fixed")) {
+              header.classList.remove("header__fixed__shown");
+              setTimeout(function () {
+                header.classList.remove("header__fixed");
+              }, 500);
+            }
+          }
+        },
+        false
+      );
+    }
+  } catch (e) {
+    console.log(`Error on Bayat.fixedHeader.init - ${e}`);
+  }
+};
+
 window.addEventListener("DOMContentLoaded", function () {
   Bayat.slider.init();
   Bayat.sliderTab.init();
+  Bayat.fixedHeader.init();
 });
