@@ -15,6 +15,7 @@
   &.btn-gold {
     background-color: $third_color;
     color: $dark_color;
+
     &:hover {
       background-color: $primary_color;
       color: $white_color;
@@ -89,6 +90,7 @@
   &.has-dots {
     .owl-dots {
       margin-top: 1.5rem;
+
       .owl-dot {
         span {
           @include transition;
@@ -183,6 +185,7 @@
 
         a {
           color: $white_color;
+
           &:hover {
             color: $third_color;
           }
@@ -267,7 +270,7 @@
       &.has-children {
         position: relative;
 
-        & > a {
+        &>a {
           &::after {
             content: "\f0d7";
             font-family: "FontAwesome";
@@ -286,7 +289,7 @@
             width: 100%;
             min-width: 150px;
 
-            & > a {
+            &>a {
               display: block;
               padding: 0.5rem 1.5rem;
             }
@@ -357,7 +360,7 @@
                       color: $third_color;
                     }
 
-                    & > .infinite-menu {
+                    &>.infinite-menu {
                       opacity: 1;
                       visibility: visible;
                       transform: translateX(0);
@@ -371,7 +374,7 @@
                   color: $third_color;
                 }
 
-                & > .infinite-menu {
+                &>.infinite-menu {
                   opacity: 1;
                   visibility: visible;
                   transform: translateX(0);
@@ -382,13 +385,13 @@
         }
 
         &:hover {
-          & > .first-menu {
+          &>.first-menu {
             opacity: 1;
             visibility: visible;
             transform: rotateX(0);
           }
 
-          & > a {
+          &>a {
             color: $third_color;
 
             &::after {
@@ -420,6 +423,7 @@
     .fixed-none {
       display: none;
     }
+
     .fixed-visible {
       display: block;
     }
@@ -493,6 +497,7 @@
 
         &.open {
           span {
+
             &:nth-child(1),
             &:nth-child(6) {
               -webkit-transform: rotate(45deg);
@@ -616,6 +621,7 @@
   }
 
   @media only screen and (max-width: 768px) {
+
     &__wrapper,
     nav,
     &__before,
@@ -729,13 +735,20 @@
       font-weight: 700;
       position: relative;
       z-index: 2;
+      font-size: 3em;
+
+      span {
+        font-weight: 500;
+        font-size: smaller;
+      }
     }
 
     h3 {
       color: $white_color;
-      font-weight: 500;
+      font-weight: 100;
       position: relative;
       z-index: 2;
+      margin-bottom: 1.5rem;
     }
 
     span {
@@ -758,12 +771,10 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        101.48deg,
-        rgba(0, 0, 0, 0) 38.1%,
-        rgba($primary_color, 0.8) 57.95%,
-        $primary_color 70.54%
-      );
+      background: linear-gradient(101.48deg,
+          rgba(0, 0, 0, 0) 38.1%,
+          rgba($primary_color, 0.8) 57.95%,
+          $primary_color 70.54%);
 
       z-index: 1;
     }
@@ -896,7 +907,7 @@
     }
 
     p {
-      font-weight: 400;
+      font-weight: 300;
       color: $text_color;
       font-size: 1rem;
     }
@@ -1106,6 +1117,7 @@
     }
 
     &.gray-bg {
+
       .immigration__slider__item,
       .immigration__slider__tabs {
         background-color: $white_color;
@@ -1119,6 +1131,7 @@
 
       &__item {
         &__content {
+
           .key,
           .value {
             font-size: 0.9rem;
@@ -1127,6 +1140,7 @@
       }
 
       &.gray-bg-md {
+
         .immigration__slider__item,
         .immigration__slider__tabs {
           background-color: $white_color;
@@ -1134,6 +1148,7 @@
       }
 
       &.white-bg-md {
+
         .immigration__slider__item,
         .immigration__slider__tabs {
           background-color: $gray_color;
@@ -1169,6 +1184,7 @@
       img {
         filter: grayscale(1);
         @include transition;
+        margin-bottom: 1rem;
       }
 
       div {
@@ -1291,6 +1307,11 @@
     &__img {
       padding: 0;
       margin: 0;
+
+      img {
+        display: block;
+        width: 100%;
+      }
     }
 
     &__data {
@@ -1300,15 +1321,16 @@
       height: 100%;
 
       h1 {
-        font-weight: bold;
+        font-weight: 400;
         font-size: 2rem;
         color: $dark_color;
         border-right: 2px solid $third_color;
         padding-right: 1rem;
+        margin-bottom: 2rem;
       }
 
       p {
-        font-weight: 400;
+        font-weight: 300;
         font-size: 1rem;
         color: $text_color;
       }
@@ -1381,6 +1403,7 @@
         text-align: center;
         width: 100%;
       }
+
       .desc {
         text-align: center;
       }
@@ -1406,6 +1429,7 @@
         margin: 0 auto;
       }
     }
+
     &__item {
       text-align: center;
 
@@ -1616,6 +1640,7 @@
 
     @media only screen and (max-width: 768px) {
       &__item {
+
         .title,
         .desc {
           text-align: center;
@@ -1631,7 +1656,7 @@
 
 .footer-right-panel {
   @media only screen and (max-width: 768px) {
-    & > .nav-item {
+    &>.nav-item {
       margin-bottom: 1rem;
     }
   }
