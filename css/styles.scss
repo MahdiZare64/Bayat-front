@@ -730,7 +730,7 @@
       object-fit: cover;
     }
 
-    h1 {
+    .main-title {
       color: $third_color;
       font-weight: 700;
       position: relative;
@@ -791,7 +791,7 @@
         height: 280px;
       }
 
-      h1 {
+      .main-title {
         text-align: center;
         margin-bottom: 0.5rem;
       }
@@ -883,7 +883,7 @@
   }
 
   &__content {
-    h1 {
+    .main-title {
       font-weight: 700;
       color: $dark_color;
       font-size: 1.5rem;
@@ -925,7 +925,7 @@
     }
 
     @media only screen and (max-width: 768px) {
-      h1 {
+      .main-title {
         text-align: center;
 
         &::after {
@@ -1257,7 +1257,7 @@
   }
 
   &__contact_us {
-    h1 {
+    .main-title {
       font-weight: 700;
       color: $dark_color;
       font-size: 1.5rem;
@@ -1284,7 +1284,7 @@
     }
 
     @media only screen and (max-width: 768px) {
-      h1 {
+      .main-title {
         text-align: center;
       }
 
@@ -1320,7 +1320,7 @@
       justify-content: center;
       height: 100%;
 
-      h1 {
+      .main-title {
         font-weight: 400;
         font-size: 2rem;
         color: $dark_color;
@@ -1345,7 +1345,7 @@
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
 
-        h1 {
+        .main-title {
           border-right: unset;
           padding-right: 0;
           text-align: center;
@@ -1384,7 +1384,6 @@
 
     .title {
       color: $third_color;
-      font-weight: 900;
       font-size: 2rem;
       padding-right: 1.5rem;
       border-right: 2px solid $third_color;
@@ -1415,7 +1414,7 @@
       text-align: center;
       margin-bottom: 3rem;
 
-      h1 {
+      .main-title {
         font-weight: 900;
         font-size: 2rem;
         color: $dark_color;
