@@ -1289,9 +1289,13 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="custom-form-group">
+                                    <div class="custom-form-group select-box">
                                         <label for="num">تعداد اعضای خانواده</label>
-                                        <input type="" id="num">
+                                        <select name="count" id="num" aria-required="true" aria-invalid="false">
+                                            <option value="۱ - ۲">۱ - ۲</option>
+                                            <option value="۳ - ۵">۳ - ۵</option>
+                                            <option value="+۵">+۵</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -1312,7 +1316,8 @@
                                 <div class="col-12">
                                     <div class="custom-form-group">
                                         <label for="desc">توضیحات تکمیلی یا پیام شما</label>
-                                        <input type="" id="desc">
+                                        <textarea name="content" cols="40" rows="3" id="desc" aria-required="true"
+                                            aria-invalid="false"></textarea>
                                     </div>
                                 </div>
 
@@ -1326,7 +1331,7 @@
                     </div>
 
                     <div class="col-6 d-none d-md-block">
-                        <img src="images/map.png" alt="map">
+                        <img src="images/map.png" alt="">
                     </div>
                 </div>
             </div>

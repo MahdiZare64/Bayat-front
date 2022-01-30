@@ -12725,6 +12725,8 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.custom-form-group textarea,
+.custom-form-group select,
 .custom-form-group input {
   height: 72px;
   width: 100%;
@@ -12738,6 +12740,26 @@ a {
   font-size: 0.9rem;
   font-weight: 500;
   color: #666666;
+}
+
+.custom-form-group textarea {
+  height: unset;
+}
+
+.custom-form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+.custom-form-group.select-box::after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  font-weight: 900;
+  position: absolute;
+  top: 33px;
+  left: 15px;
+  font-size: 1rem;
 }
 
 .custom-form-group label {
