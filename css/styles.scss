@@ -168,6 +168,19 @@
       }
     }
   }
+
+  .owl-stage {
+    display: flex;
+    flex-direction: row;
+
+    &::after {
+      display: none;
+    }
+
+    .owl-item {
+      float: none;
+    }
+  }
 }
 
 .header {
@@ -1058,6 +1071,7 @@
     &__item {
       background-color: $gray_color;
       border-radius: 1rem;
+      height: 100%;
       @include transition;
 
       &__img {

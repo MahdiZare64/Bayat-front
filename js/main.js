@@ -4,7 +4,7 @@ Bayat.slider = Bayat.slider || {};
 Bayat.slider.init = function () {
   try {
     $(".immigration__slider__main").owlCarousel({
-      loop: true,
+      loop: false,
       margin: 30,
       smartSpeed: 700,
       autoplay: true,
@@ -33,7 +33,7 @@ Bayat.slider.init = function () {
     });
 
     $(".immigration__countries__slider").owlCarousel({
-      loop: true,
+      loop: false,
       margin: 30,
       smartSpeed: 700,
       // autoplay: true,
@@ -59,7 +59,7 @@ Bayat.slider.init = function () {
     });
 
     $(".home__reasons__slider").owlCarousel({
-      loop: true,
+      loop: false,
       margin: 30,
       smartSpeed: 700,
       autoplay: true,
@@ -86,7 +86,7 @@ Bayat.slider.init = function () {
     });
 
     $(".home__our_team__slider").owlCarousel({
-      loop: true,
+      loop: false,
       margin: 30,
       smartSpeed: 700,
       autoplay: true,
