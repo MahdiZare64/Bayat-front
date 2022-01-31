@@ -7,7 +7,7 @@ Bayat.slider.init = function () {
       loop: false,
       margin: 30,
       smartSpeed: 700,
-      autoplay: true,
+      // autoplay: true,
       autoplayTimeout: 3000,
       rtl: true,
       nav: true,

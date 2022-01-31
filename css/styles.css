@@ -12682,6 +12682,12 @@ a {
   -moz-user-select: auto !important;
 }
 
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1520px;
+  }
+}
+
 .custom-btn {
   background-color: #0a0e3e;
   color: #ffffff;
@@ -13818,6 +13824,10 @@ a {
 
 .immigration__slider__item__img {
   border-radius: 1rem;
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .immigration__slider__item__content {
