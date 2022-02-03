@@ -95,16 +95,17 @@ Bayat.slider.init = function () {
       nav: false,
       autoplayHoverPause: true,
       dots: false,
+      stagePadding: 100,
       responsive: {
         0: {
-          items: 1.5,
-          stagePadding: 30,
+          items: 1,
+          stagePadding: 50,
         },
         576: {
-          items: 2.5,
+          items: 2,
         },
         991: {
-          items: 3.5,
+          items: 3,
         },
       },
     });
@@ -185,7 +186,7 @@ Bayat.fixedHeader.init = function () {
         item.addEventListener("click", function () {
           const ul = item.parentElement.children;
           ul[2].classList.toggle("active");
-          item.classList.toggle("active")
+          item.classList.toggle("active");
         });
       });
     }
