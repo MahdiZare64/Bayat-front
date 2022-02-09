@@ -1577,6 +1577,30 @@
         }
       }
     }
+
+    .owl-nav {
+      .owl-next {
+        left: 2rem !important;
+      }
+
+      .owl-prev {
+        right: 2rem !important;
+      }
+
+      button {
+        background-color: $white_color !important;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100% !important;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          font-size: 1rem !important;
+        }
+      }
+    }
   }
 
   &__media {
