@@ -11682,6 +11682,48 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Thin.woff") format("woff");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Black.woff") format("woff");
+  font-weight: 900;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -11868,7 +11910,8 @@ a:hover {
 
 section {
   margin: auto;
-  max-width: 2048px;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 section.gray-bg {
@@ -11951,7 +11994,7 @@ html {
 }
 
 body {
-  font-family: Vazir;
+  font-family: Vazir, Tahoma, "DejaVu Sans", helvetica, arial, freesans, sans-serif;
   font-size: 1rem;
   line-height: 1.65;
   color: #333333;
