@@ -11911,7 +11911,7 @@ a:hover {
 section {
   margin: auto;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 section.gray-bg {

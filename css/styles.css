@@ -12193,7 +12193,7 @@ a:hover {
 section {
   margin: auto;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 section.gray-bg {
@@ -12893,8 +12893,11 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-  .owl-carousel.has-nav .owl-nav {
-    display: none !important;
+  .owl-carousel.has-nav .owl-nav .owl-prev {
+    right: -1rem;
+  }
+  .owl-carousel.has-nav .owl-nav .owl-next {
+    left: -1rem;
   }
 }
 
