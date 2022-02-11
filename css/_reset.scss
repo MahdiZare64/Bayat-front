@@ -1,6 +1,8 @@
 $white_color: #ffffff;
 $dark_color: #333333;
+$black_color: #05071f;
 $text_color: #808080;
+$white_text: #9395aa;
 $gray_color: #ededed;
 $primary_color: #0a0e3e;
 $secondary_color: #080c33;
@@ -346,7 +348,8 @@ html {
 }
 
 body {
-  font-family: Vazir, Tahoma, "DejaVu Sans", helvetica, arial, freesans, sans-serif;
+  font-family: Vazir, Tahoma, "DejaVu Sans", helvetica, arial, freesans,
+    sans-serif;
   font-size: 1rem;
   line-height: 1.65;
   color: $dark_color;
