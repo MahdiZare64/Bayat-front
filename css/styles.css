@@ -13479,6 +13479,10 @@ a {
   }
 }
 
+.header.no-height {
+  height: unset !important;
+}
+
 .bg__man_with_money {
   position: relative;
 }
@@ -14670,6 +14674,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 20%;
 }
 

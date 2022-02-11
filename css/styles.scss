@@ -681,6 +681,10 @@
       display: block;
     }
   }
+
+  &.no-height {
+    height: unset !important;
+  }
 }
 
 .bg {
@@ -1829,6 +1833,7 @@
     &__item {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       width: 20%;
 
       .title {
