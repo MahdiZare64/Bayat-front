@@ -162,15 +162,22 @@ Bayat.sliderTab.init = function () {
 Bayat.fixedHeader = Bayat.fixedHeader || {};
 Bayat.fixedHeader.init = function () {
   try {
-    const header = document.querySelector(".home__header");
+    let header = document.querySelector(".home__header");
 
     if (header) {
       window.addEventListener(
         "scroll",
         function () {
           var st = window.pageYOffset || document.documentElement.scrollTop;
+
           if (st > 1000) {
             if (!header.classList.contains("header__fixed")) {
+              if (window.innerWidth > 991) {
+                header = document.querySelector(".home__header");
+              } else {
+                header = document.querySelector(".header__mobile");
+              }
+
               header.classList.add("header__fixed");
               setTimeout(function () {
                 header.classList.add("header__fixed__shown");
@@ -178,6 +185,12 @@ Bayat.fixedHeader.init = function () {
             }
           } else {
             if (header.classList.contains("header__fixed")) {
+              if (window.innerWidth > 991) {
+                header = document.querySelector(".home__header");
+              } else {
+                header = document.querySelector(".header__mobile");
+              }
+
               header.classList.remove("header__fixed__shown");
               setTimeout(function () {
                 header.classList.remove("header__fixed");
