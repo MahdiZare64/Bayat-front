@@ -13755,6 +13755,54 @@ a {
   overflow: hidden;
 }
 
+.immigration__content__table {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0;
+  margin-top: 3rem;
+}
+
+.immigration__content__table tr {
+  background-color: #e1e1e1;
+}
+
+.immigration__content__table tr td,
+.immigration__content__table tr th {
+  padding: 1rem 1.5rem;
+}
+
+.immigration__content__table tr th {
+  font-weight: 400;
+  color: #989898;
+  font-size: 1rem;
+}
+
+.immigration__content__table tr td {
+  color: #0a0e3e;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.immigration__content__table thead th:first-of-type {
+  border-radius: 0 0.5rem 0 0;
+}
+
+.immigration__content__table thead th:last-of-type {
+  border-radius: 0.5rem 0 0;
+}
+
+.immigration__content__table tbody tr:last-of-type td:first-of-type,
+.immigration__content__table tbody tr:last-of-type th:first-of-type {
+  border-radius: 0 0 0.5rem 0;
+}
+
+.immigration__content__table tbody tr:last-of-type td:last-of-type,
+.immigration__content__table tbody tr:last-of-type th:last-of-type {
+  border-radius: 0 0 0 0.5rem;
+}
+
 @media only screen and (max-width: 768px) {
   .immigration__content .main-title {
     text-align: center;
@@ -13768,6 +13816,16 @@ a {
   }
   .immigration__content .video {
     margin-top: 1.5rem;
+  }
+  .immigration__content__table td,
+  .immigration__content__table th {
+    text-align: center;
+    vertical-align: center;
+    padding: 1rem 0.25rem !important;
+  }
+  .immigration__content__table td .md-text,
+  .immigration__content__table th .md-text {
+    display: none;
   }
 }
 
