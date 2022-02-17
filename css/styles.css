@@ -14183,10 +14183,6 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.immigration__contact_us img {
-  border-radius: 1rem;
-}
-
 @media only screen and (max-width: 768px) {
   .immigration__contact_us .main-title {
     text-align: center;
