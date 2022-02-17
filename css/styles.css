@@ -14861,4 +14861,171 @@ a {
     text-align: center;
   }
 }
+
+.modal__overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99998;
+  overflow-y: scroll;
+  padding: 3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal__overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__consultation {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  z-index: 99999;
+  width: 100%;
+  max-width: 800px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+  opacity: 0;
+  visibility: visible;
+}
+
+.modal__consultation.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__consultation .close-modal {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  background-color: #0a0e3e;
+  border: 1px solid #0a0e3e;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+}
+
+.modal__consultation .close-modal i {
+  transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+}
+
+.modal__consultation .close-modal:hover {
+  background-color: #ffffff;
+  border-color: #0a0e3e;
+}
+
+.modal__consultation .close-modal:hover i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  color: #0a0e3e;
+}
+
+.modal__consultation .main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-bottom: 1rem;
+}
+
+.modal__consultation .main-title img {
+  width: 150px;
+  height: 150px;
+  margin-right: 1rem;
+}
+
+.modal__consultation .main-title .inner-title .title {
+  font-weight: 700;
+  color: #333333;
+  font-size: 1.8rem;
+}
+
+.modal__consultation .main-title .inner-title .desc {
+  font-weight: 500;
+  color: #808080;
+  font-size: 1.3rem;
+}
+
+.modal__consultation form .custom-btn {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal__consultation .main-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal__consultation .main-title img {
+    width: 100px;
+    height: 100px;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .modal__consultation .main-title .inner-title {
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

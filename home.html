@@ -256,7 +256,7 @@
                     <br>
                     در سطح جهانی</h1>
                 <h3 class="long-text">موسس گروه حقوقی بیات، آقای سام بیات، وکیل دادگستری پایه یک کانادا</h3>
-                <a href="#" class="custom-btn btn-gold px-4 py-3 home-btn">
+                <a href="#" class="custom-btn btn-gold px-4 py-3 home-btn consultation-modal-btn">
                     درخواست مشاوره رایگان
                 </a>
             </div>
@@ -1581,10 +1581,73 @@
 
         <div class="footer__bottom">
             <div class="container">
-                تمام حقوق برای گروه حقوقی بیات محفوظ است. 
+                تمام حقوق برای گروه حقوقی بیات محفوظ است.
             </div>
         </div>
     </footer>
+
+    <!-- modal -->
+
+    <div class="modal__overlay">
+        <div class="modal__consultation">
+
+            <div class="close-modal consultation-modal-btn"><i class="fas fa-times"></i></div>
+
+            <div class="main-title">
+                <img src="images/logo-sm.svg" alt="">
+
+                <div class="inner-title">
+                    <h2 class="title">درخواست مشاوره رایگان خود را ثبت کنید</h2>
+                    <p class="desc">با پر کردن اطلاعات زیر، همکاران ما با شما تماس می‌گیرند و اطلاعات تکمیلی را در
+                        اختیار
+                        شما می‌گذارند</p>
+                </div>
+            </div>
+
+            <form action="">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="custom-form-group">
+                            <label for="name">نام و نام خانوادگی</label>
+                            <input type="text" id="name">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="custom-form-group">
+                            <label for="phone">شماره تماس</label>
+                            <input type="text" id="phone">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="custom-form-group select-box">
+                            <label for="num">تعداد اعضای خانواده</label>
+                            <select name="count" id="num" aria-required="true" aria-invalid="false">
+                                <option value="۱ - ۲">۱ - ۲</option>
+                                <option value="۳ - ۵">۳ - ۵</option>
+                                <option value="+۵">+۵</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-8">
+                        <div class="custom-form-group">
+                            <label for="question">سوال شما راجع به</label>
+                            <input type="text" id="question">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 d-flex align-items-center">
+                        <button type="submit" class="custom-btn btn-gold w-100 white-color">
+                            ثبت درخواست مشاوره
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
 
     <script src="js/jquery.slim.js"></script>
     <script src="js/owl.min.js"></script>

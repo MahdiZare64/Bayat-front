@@ -233,9 +233,38 @@ Bayat.header.init = function () {
   }
 };
 
+Bayat.modal = Bayat.modal || {};
+Bayat.modal.init = function () {
+  try {
+    function modalHandler(btn, target, className = "active") {
+      const btns = document.querySelectorAll(btn);
+      const overlay = document.querySelector(".modal__overlay");
+
+      if (btns.length) {
+        btns.forEach(function (item) {
+          item.addEventListener("click", function () {
+            document.querySelector(target).classList.toggle(className);
+            overlay.classList.toggle("active");
+          });
+        });
+
+        overlay.addEventListener("click", function () {
+          document.querySelector(target).classList.remove(className);
+          overlay.classList.remove("active");
+        });
+      }
+    }
+
+    modalHandler(".consultation-modal-btn", ".modal__consultation");
+  } catch (e) {
+    console.log(`Error on Bayat.modal.init - ${e}`);
+  }
+};
+
 window.addEventListener("DOMContentLoaded", function () {
   Bayat.slider.init();
   Bayat.sliderTab.init();
   Bayat.fixedHeader.init();
   Bayat.header.init();
+  Bayat.modal.init();
 });

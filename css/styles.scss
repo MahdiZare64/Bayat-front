@@ -2032,3 +2032,132 @@
     }
   }
 }
+
+.modal {
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99998;
+    overflow-y: scroll;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    @include transition;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__consultation {
+    background-color: $white_color;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    z-index: 99999;
+    width: 100%;
+    max-width: 800px;
+    height: max-content;
+    position: relative;
+    @include transition;
+    transform: translateY(5rem);
+    opacity: 0;
+    visibility: visible;
+
+    &.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .close-modal {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 100%;
+      position: absolute;
+      top: 0.25rem;
+      right: 0.5rem;
+      background-color: $primary_color;
+      border: 1px solid $primary_color;
+      color: $white_color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      @include transition;
+
+      i {
+        @include transition;
+      }
+
+      &:hover {
+        background-color: $white_color;
+        border-color: $primary_color;
+
+        i {
+          transform: rotate(90deg);
+          color: $primary_color;
+        }
+      }
+    }
+
+    .main-title {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-bottom: 1rem;
+
+      img {
+        width: 150px;
+        height: 150px;
+        margin-right: 1rem;
+      }
+
+      .inner-title {
+        .title {
+          font-weight: 700;
+          color: $dark_color;
+          font-size: 1.8rem;
+        }
+
+        .desc {
+          font-weight: 500;
+          color: $text_color;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    form {
+      .custom-btn {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+    .main-title {
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 100px;
+        height: 100px;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      .inner-title {
+        text-align: center;
+      }
+    }
+    }
+
+  }
+}
