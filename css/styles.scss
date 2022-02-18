@@ -2707,6 +2707,9 @@
     padding: 3rem 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
     @include transition;
     opacity: 0;
     visibility: hidden;

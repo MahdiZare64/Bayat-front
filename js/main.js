@@ -247,11 +247,6 @@ Bayat.modal.init = function () {
             overlay.classList.toggle("active");
           });
         });
-
-        overlay.addEventListener("click", function () {
-          document.querySelector(target).classList.remove(className);
-          overlay.classList.remove("active");
-        });
       }
     }
 
