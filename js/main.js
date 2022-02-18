@@ -261,10 +261,55 @@ Bayat.modal.init = function () {
   }
 };
 
+Bayat.accordion = Bayat.accordion || {};
+Bayat.accordion.init = function () {
+  try {
+    const accordion = document.querySelectorAll(".accordion-wrapper");
+
+    if (accordion.length) {
+      accordion.forEach(function (item) {
+        const header = item.querySelector(".accordion-header");
+        const body = item.querySelector(".accordion-body");
+        const sp = header.querySelector("span");
+
+        function clicked() {
+          let pre = ".accordion-wrapper:not(.accordion-md) ";
+          if (window.innerWidth < 768) {
+            pre = "";
+          }
+
+          if (!$(item).hasClass("active-accordion")) {
+            $(pre + ".accordion-body").slideUp();
+            $(pre + ".accordion-header span").fadeIn();
+            $(pre).removeClass("active-accordion");
+          }
+
+          $(body).slideToggle();
+          $(sp).fadeToggle();
+          $(item).toggleClass("active-accordion");
+        }
+
+        header.addEventListener("click", function () {
+          if (!item.classList.contains("accordion-md")) {
+            clicked();
+          } else {
+            if (window.innerWidth < 768) {
+              clicked();
+            }
+          }
+        });
+      });
+    }
+  } catch (e) {
+    console.log(`Error on Bayat.accordion.init - ${e}`);
+  }
+};
+
 window.addEventListener("DOMContentLoaded", function () {
   Bayat.slider.init();
   Bayat.sliderTab.init();
   Bayat.fixedHeader.init();
   Bayat.header.init();
   Bayat.modal.init();
+  Bayat.accordion.init();
 });
