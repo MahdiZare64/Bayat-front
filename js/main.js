@@ -273,7 +273,6 @@ Bayat.header.init = function () {
       btn.addEventListener("click", function () {
         btn.querySelector(".nav-icon").classList.toggle("open");
         document.querySelector(".header__mobile ul").classList.toggle("open");
-        document.querySelector("body").classList.toggle("no-scroll");
       });
     }
   } catch (e) {
