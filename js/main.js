@@ -117,6 +117,22 @@ Bayat.slider.init = function () {
         },
       },
     });
+
+    $(".contact_us__testimonial__slider").owlCarousel({
+      loop: true,
+      smartSpeed: 700,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      rtl: true,
+      nav: true,
+      dots: true,
+      navText: [
+        "<i class='fas fa-angle-right'></i>",
+        "<i class='fas fa-angle-left'></i>",
+      ],
+      autoplayHoverPause: true,
+      items: 1,
+    });
   } catch (e) {
     console.log(`Error on Bayat.slider.init - ${e}`);
   }
