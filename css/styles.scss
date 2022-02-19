@@ -2680,6 +2680,7 @@
 
         .info {
           width: 300px;
+          max-width: 100%;
           margin: 0 auto;
 
           &-row {
@@ -2712,10 +2713,6 @@
                 color: $blue_color;
               }
             }
-          }
-
-          @media only screen and (max-width: 576px) {
-            width: 100%;
           }
         }
       }

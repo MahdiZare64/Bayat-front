@@ -15469,6 +15469,7 @@ a {
 
 .contact_us__office__slider .immigration__slider__item__content .info {
   width: 300px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -15513,12 +15514,6 @@ a {
 
 .contact_us__office__slider .immigration__slider__item__content .info-row a.value::hover {
   color: #3f458a;
-}
-
-@media only screen and (max-width: 576px) {
-  .contact_us__office__slider .immigration__slider__item__content .info {
-    width: 100%;
-  }
 }
 
 .contact_us__Publishers .item {
