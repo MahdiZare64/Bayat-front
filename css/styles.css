@@ -12832,6 +12832,11 @@ a {
   font-weight: 500;
 }
 
+.text-after {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
 .text-after::after {
   content: "";
   display: block;
@@ -12840,6 +12845,15 @@ a {
   background-color: #c19463;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.text-after.center {
+  text-align: center;
+}
+
+.text-after.center::after {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -15275,6 +15289,10 @@ a {
      object-fit: cover;
 }
 
+.contact_us__intro__banner img.w-100 {
+  max-width: 100%;
+}
+
 .contact_us__intro__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15294,6 +15312,11 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.contact_us__intro__content .text-after span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 .contact_us__intro__content .text-after::after {
   margin: 0 auto;
   margin-top: 1rem;
@@ -15310,6 +15333,9 @@ a {
 @media only screen and (max-width: 1400px) {
   .contact_us__intro__banner img {
     max-width: 70%;
+  }
+  .contact_us__intro__banner img.w-100 {
+    max-width: 100%;
   }
 }
 
@@ -15487,6 +15513,80 @@ a {
 
 .contact_us__office__slider .immigration__slider__item__content .info-row a.value::hover {
   color: #3f458a;
+}
+
+@media only screen and (max-width: 576px) {
+  .contact_us__office__slider .immigration__slider__item__content .info {
+    width: 100%;
+  }
+}
+
+.contact_us__Publishers .item {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.contact_us__magazines .item {
+  border-radius: 1rem;
+  background-color: #ededed;
+  padding: 1rem;
+}
+
+.about_us__content__row {
+  margin-bottom: 2rem;
+}
+
+.about_us__content__row .text-after span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.about_us__content__row .desc {
+  color: #808080;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.about_us__content__row__img {
+  width: 100%;
+  max-height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+.about_us__content__row .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about_us__content__row:nth-child(even) .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 768px) {
+  .about_us__content__row .text-after {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .about_us__content__row .desc {
+    text-align: center;
+  }
+  .about_us__content__row__img {
+    max-height: 15rem;
+  }
+  .about_us__content__row .row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
 }
 
 .btn-landing {
@@ -15789,6 +15889,14 @@ a {
 .modal__overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal__overlay {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
 }
 
 .modal__consultation {

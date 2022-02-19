@@ -101,6 +101,9 @@
 }
 
 .text-after {
+  font-weight: 700;
+  font-size: 2rem;
+
   &::after {
     content: "";
     display: block;
@@ -109,6 +112,15 @@
     background-color: $third_color;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+  }
+
+  &.center {
+    text-align: center;
+
+    &::after {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -2487,6 +2499,10 @@
         max-width: 1360px;
         height: 100%;
         object-fit: cover;
+
+        &.w-100 {
+          max-width: 100%;
+        }
       }
     }
 
@@ -2499,6 +2515,11 @@
         text-align: center;
         margin-top: 2rem;
         margin-bottom: 0.5rem;
+
+        span {
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
 
         &::after {
           margin: 0 auto;
@@ -2519,6 +2540,10 @@
       &__banner {
         img {
           max-width: 70%;
+
+          &.w-100 {
+            max-width: 100%;
+          }
         }
       }
     }
@@ -2532,13 +2557,13 @@
     }
 
     @media only screen and (max-width: 576px) {
-    &__banner {
-      img {
-        max-width: unset;
-        width: 100%;
-        min-height: 300px;
+      &__banner {
+        img {
+          max-width: unset;
+          width: 100%;
+          min-height: 300px;
+        }
       }
-    }
     }
   }
 
@@ -2688,6 +2713,86 @@
               }
             }
           }
+
+          @media only screen and (max-width: 576px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__Publishers {
+    .item {
+      border-radius: 1rem;
+      background-color: $white_color;
+      padding: 1rem;
+    }
+  }
+
+  &__magazines {
+    .item {
+      border-radius: 1rem;
+      background-color: $gray_color;
+      padding: 1rem;
+    }
+  }
+}
+
+.about_us {
+  &__content {
+    &__row {
+      margin-bottom: 2rem;
+
+      .text-after {
+        span {
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
+      }
+
+      .desc {
+        color: $text_color;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+
+      &__img {
+        width: 100%;
+        max-height: 25rem;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+
+      .row {
+        align-items: center;
+      }
+
+      &:nth-child(even) {
+        .row {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      &__row {
+        .text-after {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .desc {
+          text-align: center;
+        }
+
+      &__img {
+        max-height: 15rem;
+      }
+
+        .row {
+          flex-direction: column-reverse !important;
         }
       }
     }
@@ -2947,6 +3052,10 @@
     &.active {
       opacity: 1;
       visibility: visible;
+    }
+
+    @media only screen and (max-width: 768px) {
+      align-items: unset;
     }
   }
 

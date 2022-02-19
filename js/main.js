@@ -133,6 +133,38 @@ Bayat.slider.init = function () {
       autoplayHoverPause: true,
       items: 1,
     });
+
+    $(".contact_us__Publishers__slider").owlCarousel({
+      loop: false,
+      margin: 30,
+      smartSpeed: 700,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      rtl: true,
+      nav: true,
+      autoplayHoverPause: true,
+      dots: true,
+      items: 4,
+      navText: [
+        "<i class='fas fa-angle-right'></i>",
+        "<i class='fas fa-angle-left'></i>",
+      ],
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        576: {
+          items: 2,
+        },
+        991: {
+          items: 3,
+        },
+        1200: {
+          items: 4,
+        },
+      },
+    });
   } catch (e) {
     console.log(`Error on Bayat.slider.init - ${e}`);
   }
