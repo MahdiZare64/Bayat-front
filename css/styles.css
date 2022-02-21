@@ -14222,8 +14222,17 @@ a {
 }
 
 .home__content {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+}
+
+.home__content .row {
+  width: 100%;
+  margin: 0;
+}
+
+.home__content .row > * {
+  padding: 0 !important;
 }
 
 .home__content__img {
@@ -14248,7 +14257,8 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  padding: 0 1rem;
+  padding-right: 1rem;
+  padding-left: 1.5rem;
 }
 
 .home__content__data .main-title {
@@ -14273,10 +14283,14 @@ a {
           flex-direction: row-reverse;
 }
 
+.home__content .row:nth-child(even) .home__content__data {
+  padding-right: 2rem;
+  padding-left: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
   .home__content__data {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 1rem !important;
   }
   .home__content__data .main-title {
     border-right: unset;

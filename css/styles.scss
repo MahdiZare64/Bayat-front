@@ -1444,8 +1444,17 @@
 
 .home {
   &__content {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
+
+    .row {
+      width: 100%;
+      margin: 0;
+
+      & > * {
+        padding: 0 !important;
+      }
+    }
 
     &__img {
       padding: 0;
@@ -1462,7 +1471,8 @@
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      padding: 0 1rem;
+      padding-right: 1rem;
+      padding-left: 1.5rem;
 
       .main-title {
         font-weight: 400;
@@ -1482,12 +1492,16 @@
 
     .row:nth-child(even) {
       flex-direction: row-reverse;
+
+      .home__content__data {
+        padding-right: 2rem;
+        padding-left: 1rem;
+      }
     }
 
     @media only screen and (max-width: 768px) {
       &__data {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding: 1.5rem 1rem !important;
 
         .main-title {
           border-right: unset;
@@ -2785,9 +2799,9 @@
           text-align: center;
         }
 
-      &__img {
-        max-height: 15rem;
-      }
+        &__img {
+          max-height: 15rem;
+        }
 
         .row {
           flex-direction: column-reverse !important;
