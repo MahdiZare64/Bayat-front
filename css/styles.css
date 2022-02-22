@@ -14983,7 +14983,7 @@ a {
   font-weight: 400;
 }
 
-.country__tables__wrapper__table {
+.country__tables__wrapper table, .country__tables__wrapper__table {
   border: 1px solid #c19463;
   border-radius: 1rem;
   margin-right: 0;
@@ -14992,19 +14992,24 @@ a {
   width: 100%;
 }
 
-.country__tables__wrapper__table tr,
+.country__tables__wrapper table tr,
+.country__tables__wrapper table .table-row, .country__tables__wrapper__table tr,
 .country__tables__wrapper__table .table-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.country__tables__wrapper__table tr:not(:last-child),
+.country__tables__wrapper table tr:not(:last-child),
+.country__tables__wrapper table .table-row:not(:last-child), .country__tables__wrapper__table tr:not(:last-child),
 .country__tables__wrapper__table .table-row:not(:last-child) {
   border-bottom: 1px solid #c19463;
 }
 
-.country__tables__wrapper__table tr td:first-child,
+.country__tables__wrapper table tr td:first-child,
+.country__tables__wrapper table tr .key,
+.country__tables__wrapper table .table-row td:first-child,
+.country__tables__wrapper table .table-row .key, .country__tables__wrapper__table tr td:first-child,
 .country__tables__wrapper__table tr .key,
 .country__tables__wrapper__table .table-row td:first-child,
 .country__tables__wrapper__table .table-row .key {
@@ -15016,7 +15021,10 @@ a {
   color: #fafafa;
 }
 
-.country__tables__wrapper__table tr td:last-child,
+.country__tables__wrapper table tr td:last-child,
+.country__tables__wrapper table tr .value,
+.country__tables__wrapper table .table-row td:last-child,
+.country__tables__wrapper table .table-row .value, .country__tables__wrapper__table tr td:last-child,
 .country__tables__wrapper__table tr .value,
 .country__tables__wrapper__table .table-row td:last-child,
 .country__tables__wrapper__table .table-row .value {
