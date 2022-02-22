@@ -14986,19 +14986,27 @@ a {
 .country__tables__wrapper__table {
   border: 1px solid #c19463;
   border-radius: 1rem;
+  margin-right: 0;
+  margin-left: 0;
   margin-top: 2rem;
+  width: 100%;
 }
 
+.country__tables__wrapper__table tr,
 .country__tables__wrapper__table .table-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.country__tables__wrapper__table tr:not(:last-child),
 .country__tables__wrapper__table .table-row:not(:last-child) {
   border-bottom: 1px solid #c19463;
 }
 
+.country__tables__wrapper__table tr td:first-child,
+.country__tables__wrapper__table tr .key,
+.country__tables__wrapper__table .table-row td:first-child,
 .country__tables__wrapper__table .table-row .key {
   width: 70%;
   border-left: 1px solid #c19463;
@@ -15008,6 +15016,9 @@ a {
   color: #fafafa;
 }
 
+.country__tables__wrapper__table tr td:last-child,
+.country__tables__wrapper__table tr .value,
+.country__tables__wrapper__table .table-row td:last-child,
 .country__tables__wrapper__table .table-row .value {
   width: 30%;
   padding: 1.5rem 1rem;
@@ -15020,6 +15031,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.country__tables__wrapper table {
+  border-collapse: unset;
 }
 
 .country__tables__wrapper__point {

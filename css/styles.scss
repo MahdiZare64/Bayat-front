@@ -2204,8 +2204,12 @@
       &__table {
         border: 1px solid $third_color;
         border-radius: 1rem;
+        margin-right: 0;
+        margin-left: 0;
         margin-top: 2rem;
+        width: 100%;
 
+        tr,
         .table-row {
           display: flex;
 
@@ -2213,6 +2217,7 @@
             border-bottom: 1px solid $third_color;
           }
 
+          td:first-child,
           .key {
             width: 70%;
             border-left: 1px solid $third_color;
@@ -2222,6 +2227,7 @@
             color: $figma_text;
           }
 
+          td:last-child,
           .value {
             width: 30%;
             padding: 1.5rem 1rem;
@@ -2232,6 +2238,10 @@
             align-items: center;
           }
         }
+      }
+
+      table {
+        border-collapse: unset;
       }
 
       &__point {
@@ -2403,7 +2413,7 @@
           position: absolute;
           right: 0;
           border: 3px solid $third_color;
-          border-radius:0 100% 100% 0;
+          border-radius: 0 100% 100% 0;
           z-index: 2;
         }
 
@@ -2416,7 +2426,7 @@
           position: absolute;
           right: 15px;
           z-index: 3;
-          border-radius:0 100% 100% 0;
+          border-radius: 0 100% 100% 0;
         }
 
         &:not(:last-child) {
@@ -2442,7 +2452,6 @@
               z-index: 5;
             }
           }
-
         }
 
         &:nth-child(even) {
