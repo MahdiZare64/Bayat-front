@@ -2403,7 +2403,7 @@
           position: absolute;
           right: 0;
           border: 3px solid $third_color;
-          border-radius: 100%;
+          border-radius:0 100% 100% 0;
           z-index: 2;
         }
 
@@ -2414,8 +2414,9 @@
           aspect-ratio: 1;
           background-color: $white_color;
           position: absolute;
-          right: 70px;
+          right: 15px;
           z-index: 3;
+          border-radius:0 100% 100% 0;
         }
 
         &:not(:last-child) {
@@ -2424,9 +2425,24 @@
 
         &:last-child {
           &::after {
-            height: calc(100% + 6px);
+            height: 100%;
             top: 0;
           }
+
+          .counter {
+            &::before {
+              content: "";
+              display: block;
+              width: 200%;
+              height: 100%;
+              background-color: $white_color;
+              position: absolute;
+              top: 100%;
+              right: 100%;
+              z-index: 5;
+            }
+          }
+
         }
 
         &:nth-child(even) {
@@ -2435,11 +2451,13 @@
           &::before {
             right: unset;
             left: 0;
+            border-radius: 100% 0 0 100%;
           }
 
           &::after {
             right: unset;
-            left: 70px;
+            left: 15px;
+            border-radius: 100% 0 0 100%;
           }
 
           .hider {
@@ -2450,6 +2468,11 @@
           .counter {
             margin-left: 0;
             margin-right: 1.5rem;
+
+            &::before {
+              right: unset;
+              left: 100%;
+            }
           }
         }
       }
