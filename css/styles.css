@@ -15013,7 +15013,6 @@ a {
 .country__tables__wrapper__table tr .key,
 .country__tables__wrapper__table .table-row td:first-child,
 .country__tables__wrapper__table .table-row .key {
-  width: 70%;
   border-left: 1px solid #c19463;
   padding: 1.5rem 1rem;
   font-size: 1rem;
@@ -15028,7 +15027,6 @@ a {
 .country__tables__wrapper__table tr .value,
 .country__tables__wrapper__table .table-row td:last-child,
 .country__tables__wrapper__table .table-row .value {
-  width: 30%;
   padding: 1.5rem 1rem;
   font-size: 1rem;
   font-weight: 700;
@@ -15039,6 +15037,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.country__tables__wrapper table tr .key,
+.country__tables__wrapper table .table-row .key, .country__tables__wrapper__table tr .key,
+.country__tables__wrapper__table .table-row .key {
+  width: 70%;
+}
+
+.country__tables__wrapper table tr .value,
+.country__tables__wrapper table .table-row .value, .country__tables__wrapper__table tr .value,
+.country__tables__wrapper__table .table-row .value {
+  width: 30%;
 }
 
 .country__tables__wrapper table {
@@ -15064,6 +15074,25 @@ a {
 
 .country__tables__wrapper__point .desc:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.country__tables__wrapper h1,
+.country__tables__wrapper h2,
+.country__tables__wrapper h3,
+.country__tables__wrapper h4,
+.country__tables__wrapper h5,
+.country__tables__wrapper h6 {
+  color: #ffffff;
+}
+
+.country__tables__wrapper p {
+  color: #fafafa;
+}
+
+.country__tables__wrapper ul {
+  color: #fafafa;
+  list-style: unset;
+  padding-right: 1rem;
 }
 
 @media only screen and (max-width: 768px) {

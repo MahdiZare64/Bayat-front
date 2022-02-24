@@ -2220,7 +2220,6 @@
 
           td:first-child,
           .key {
-            width: 70%;
             border-left: 1px solid $third_color;
             padding: 1.5rem 1rem;
             font-size: 1rem;
@@ -2230,13 +2229,20 @@
 
           td:last-child,
           .value {
-            width: 30%;
             padding: 1.5rem 1rem;
             font-size: 1rem;
             font-weight: 700;
             color: $white_color;
             display: flex;
             align-items: center;
+          }
+
+          .key {
+            width: 70%;
+          }
+
+          .value {
+            width: 30%;
           }
         }
       }
@@ -2265,6 +2271,26 @@
           }
         }
       }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $white_color;
+      }
+
+      p {
+        color: $figma_text;
+      }
+
+      ul {
+        color: $figma_text;
+        list-style: unset;
+        padding-right: 1rem;
+      }
+
     }
 
     @media only screen and (max-width: 768px) {
