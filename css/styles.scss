@@ -2164,6 +2164,7 @@
   &__tables {
     &__wrapper {
       background-color: $primary_color;
+      color: $figma_text;
       border-radius: 1rem;
 
       &.accordion-md {
@@ -2203,24 +2204,27 @@
 
       table,
       &__table {
-        border: 1px solid $third_color;
+        border: 1px solid $third_color !important;
         border-radius: 1rem;
-        margin-right: 0;
-        margin-left: 0;
-        margin-top: 2rem;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-top: 2rem !important;
         width: 100%;
 
         tr,
         .table-row {
           display: flex;
+          background-color: transparent !important;
+          color: $white_color;
 
           &:not(:last-child) {
-            border-bottom: 1px solid $third_color;
+            border-bottom: 1px solid $third_color !important;
           }
 
           td:first-child,
           .key {
-            border-left: 1px solid $third_color;
+            border: none !important;
+            border-left: 1px solid $third_color !important;
             padding: 1.5rem 1rem;
             font-size: 1rem;
             font-weight: 200;
@@ -2229,6 +2233,7 @@
 
           td:last-child,
           .value {
+            border: none !important;
             padding: 1.5rem 1rem;
             font-size: 1rem;
             font-weight: 700;
@@ -2248,7 +2253,7 @@
       }
 
       table {
-        border-collapse: unset;
+        border-collapse: unset !important;
       }
 
       &__point {
