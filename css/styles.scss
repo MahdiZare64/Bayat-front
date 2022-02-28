@@ -2202,6 +2202,7 @@
         }
       }
 
+      .wptb-preview-table,
       table,
       &__table {
         border: 1px solid $third_color !important;
@@ -2225,21 +2226,21 @@
           .key {
             border: none !important;
             border-left: 1px solid $third_color !important;
-            padding: 1.5rem 1rem;
-            font-size: 1rem;
-            font-weight: 200;
-            color: $figma_text;
+            padding: 1.5rem 1rem !important;
+            font-size: 1rem !important;
+            font-weight: 200 !important;
+            color: $figma_text !important;
           }
 
           td:last-child,
           .value {
             border: none !important;
             padding: 1.5rem 1rem;
-            font-size: 1rem;
-            font-weight: 700;
-            color: $white_color;
-            display: flex;
-            align-items: center;
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            color: $white_color !important;
+            display: flex !important;
+            align-items: center !important;
           }
 
           .key {
@@ -2248,6 +2249,18 @@
 
           .value {
             width: 30%;
+          }
+
+          .wptb-table-container-0 {
+            td:first-child,
+            .key {
+              width: 30% !important;
+            }
+
+            td:last-child,
+            .value {
+              width: 70% !important;
+            }
           }
         }
       }
@@ -2295,7 +2308,6 @@
         list-style: unset;
         padding-right: 1rem;
       }
-
     }
 
     @media only screen and (max-width: 768px) {
