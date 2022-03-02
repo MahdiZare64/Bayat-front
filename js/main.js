@@ -316,7 +316,7 @@ Bayat.accordion.init = function () {
 
         function clicked() {
           let pre = ".accordion-wrapper:not(.accordion-md) ";
-          if (window.innerWidth < 768) {
+          if (window.innerWidth < 992) {
             pre = "";
           }
 
@@ -335,7 +335,7 @@ Bayat.accordion.init = function () {
           if (!item.classList.contains("accordion-md")) {
             clicked();
           } else {
-            if (window.innerWidth < 768) {
+            if (window.innerWidth < 992) {
               clicked();
             }
           }
