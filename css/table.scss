@@ -1,0 +1,67 @@
+$white_color: #ffffff;
+$dark_color: #333333;
+$black_color: #05071f;
+$text_color: #808080;
+$white_text: #9395aa;
+$gray_color: #ededed;
+$primary_color: #0a0e3e;
+$secondary_color: #080c33;
+$third_color: #c19463;
+$blue_color: #3f458a;
+$red_color: #f53b57;
+$yellow_color: #f2c94c;
+$figma_text: #fafafa;
+
+table {
+  border: 1px solid $third_color;
+  border-radius: 1rem;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 2rem;
+  width: 100%;
+  border-collapse: unset;
+
+  tr {
+    display: flex;
+    background-color: transparent;
+    color: $white_color;
+    border-top: unset;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $third_color;
+    }
+
+    td:first-child {
+      width: 70%;
+      border: none;
+      border-left: 1px solid $third_color;
+      padding: 1.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 200;
+      color: $figma_text;
+
+      p {
+        font-size: 1rem;
+        font-weight: 200;
+        color: $figma_text;
+      }
+    }
+
+    td:last-child {
+      width: 30%;
+      border: none;
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: $white_color;
+
+      p {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $white_color;
+      }
+    }
+  }
+}
