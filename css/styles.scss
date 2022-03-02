@@ -631,7 +631,7 @@
       background-color: $secondary_color;
       z-index: 9999;
       right: -100%;
-      overflow-y: scroll;
+      overflow-y: auto;
       @include transition;
 
       &.open {
@@ -1088,6 +1088,8 @@
       }
 
       &__table {
+        margin-top: 1.5rem;
+        
         td,
         th {
           text-align: center;

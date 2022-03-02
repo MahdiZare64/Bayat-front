@@ -22,17 +22,22 @@ table {
   border-collapse: unset !important;
 
   tr {
-    display: flex !important;
     background-color: transparent !important;
     color: $white_color !important;
-    border-top: unset !important;
+    border: unset !important;
 
     &:not(:last-child) {
-      border-bottom: 1px solid $third_color !important;
+      td {
+        border-bottom: 1px solid $third_color !important;
+        border-top: unset !important;
+      }
+    }
+
+    &:last-child {
+      border: unset !important;
     }
 
     td {
-
       .wptb-text-container {
         height: 100% !important;
         display: flex !important;
@@ -40,7 +45,6 @@ table {
       }
 
       &:first-child {
-        border: none !important;
         border-left: 1px solid $third_color !important;
         padding: 1.5rem 1rem !important;
         font-size: 1rem !important;
@@ -56,7 +60,6 @@ table {
       }
 
       &:last-child {
-        border: none !important;
         padding: 1.5rem 1rem !important;
         display: flex !important;
         align-items: center !important;
