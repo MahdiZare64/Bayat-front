@@ -13,54 +13,63 @@ $yellow_color: #f2c94c;
 $figma_text: #fafafa;
 
 table {
-  border: 1px solid $third_color;
-  border-radius: 1rem;
-  margin-right: 0;
-  margin-left: 0;
-  margin-top: 2rem;
-  width: 100%;
-  border-collapse: unset;
+  border: 1px solid $third_color !important;
+  border-radius: 1rem !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  margin-top: 2rem !important;
+  width: 100% !important;
+  border-collapse: unset !important;
 
   tr {
-    display: flex;
-    background-color: transparent;
-    color: $white_color;
-    border-top: unset;
+    display: flex !important;
+    background-color: transparent !important;
+    color: $white_color !important;
+    border-top: unset !important;
 
     &:not(:last-child) {
-      border-bottom: 1px solid $third_color;
+      border-bottom: 1px solid $third_color !important;
     }
 
-    td:first-child {
-      width: 70%;
-      border: none;
-      border-left: 1px solid $third_color;
-      padding: 1.5rem 1rem;
-      font-size: 1rem;
-      font-weight: 200;
-      color: $figma_text;
+    td {
 
-      p {
-        font-size: 1rem;
-        font-weight: 200;
-        color: $figma_text;
+      .wptb-text-container {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
       }
-    }
 
-    td:last-child {
-      width: 30%;
-      border: none;
-      padding: 1.5rem 1rem;
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-      font-weight: 700;
-      color: $white_color;
+      &:first-child {
+        border: none !important;
+        border-left: 1px solid $third_color !important;
+        padding: 1.5rem 1rem !important;
+        font-size: 1rem !important;
+        font-weight: 200 !important;
+        color: $figma_text !important;
 
-      p {
-        font-size: 1rem;
-        font-weight: 700;
-        color: $white_color;
+        p {
+          font-size: 1rem !important;
+          font-weight: 200 !important;
+          color: $figma_text !important;
+          text-align: right !important;
+        }
+      }
+
+      &:last-child {
+        border: none !important;
+        padding: 1.5rem 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        color: $white_color !important;
+
+        p {
+          font-size: 1rem !important;
+          font-weight: 700 !important;
+          color: $white_color !important;
+          text-align: right !important;
+        }
       }
     }
   }

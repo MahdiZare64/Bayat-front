@@ -1,60 +1,70 @@
 table {
-  border: 1px solid #c19463;
-  border-radius: 1rem;
-  margin-right: 0;
-  margin-left: 0;
-  margin-top: 2rem;
-  width: 100%;
-  border-collapse: unset;
+  border: 1px solid #c19463 !important;
+  border-radius: 1rem !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  margin-top: 2rem !important;
+  width: 100% !important;
+  border-collapse: unset !important;
 }
 
 table tr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: transparent;
-  color: #ffffff;
-  border-top: unset;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border-top: unset !important;
 }
 
 table tr:not(:last-child) {
-  border-bottom: 1px solid #c19463;
+  border-bottom: 1px solid #c19463 !important;
+}
+
+table tr td .wptb-text-container {
+  height: 100% !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
 }
 
 table tr td:first-child {
-  width: 70%;
-  border: none;
-  border-left: 1px solid #c19463;
-  padding: 1.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 200;
-  color: #fafafa;
+  border: none !important;
+  border-left: 1px solid #c19463 !important;
+  padding: 1.5rem 1rem !important;
+  font-size: 1rem !important;
+  font-weight: 200 !important;
+  color: #fafafa !important;
 }
 
 table tr td:first-child p {
-  font-size: 1rem;
-  font-weight: 200;
-  color: #fafafa;
+  font-size: 1rem !important;
+  font-weight: 200 !important;
+  color: #fafafa !important;
+  text-align: right !important;
 }
 
 table tr td:last-child {
-  width: 30%;
-  border: none;
-  padding: 1.5rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #ffffff;
+  border: none !important;
+  padding: 1.5rem 1rem !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
 }
 
 table tr td:last-child p {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-align: right !important;
 }
 /*# sourceMappingURL=table.css.map */

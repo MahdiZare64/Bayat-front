@@ -12961,7 +12961,7 @@ a {
 }
 
 .header__wrapper .container .custom-btn {
-  padding: 1rem 2rem;
+  padding: 0.75rem 1rem;
 }
 
 .header__wrapper__logo.logo-sm img {
@@ -13491,6 +13491,12 @@ a {
   max-height: 1000px;
 }
 
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .header__wrapper .container .custom-btn {
+    font-size: 70%;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .header {
     height: 84px;
@@ -13828,7 +13834,7 @@ a {
   border-radius: 0 0 0 0.5rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .immigration__content .main-title {
     text-align: center;
   }
@@ -13840,7 +13846,9 @@ a {
     text-align: center;
   }
   .immigration__content .video {
+    margin: 0 auto;
     margin-top: 1.5rem;
+    max-width: 400px;
   }
   .immigration__content__table td,
   .immigration__content__table th {
@@ -13877,6 +13885,7 @@ a {
   background-color: #ededed;
   border-radius: 1rem;
   width: 750px;
+  max-width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13957,6 +13966,7 @@ a {
   background-color: #ededed;
   border-radius: 1rem;
   height: 100%;
+  max-width: 400px;
   transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
   -ms-transition: all 0.4s ease-out;
@@ -14065,6 +14075,15 @@ a {
   background-color: #ffffff;
 }
 
+.immigration__slider .owl-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media only screen and (max-width: 768px) {
   .immigration__slider__tabs {
     display: none;
@@ -14130,7 +14149,7 @@ a {
 .immigration__countries__item div {
   text-align: center;
   position: relative;
-  top: 50px;
+  top: 500px;
   font-weight: 800;
   transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
@@ -14221,9 +14240,16 @@ a {
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .immigration__contact_us .custom-btn {
+    margin-bottom: 2rem;
+  }
+}
+
 .home__content {
   width: 100%;
   overflow: hidden;
+  padding-bottom: 1rem;
 }
 
 .home__content .row {
@@ -14238,6 +14264,12 @@ a {
 .home__content__img {
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home__content__img img {
@@ -14268,6 +14300,7 @@ a {
   border-right: 2px solid #c19463;
   padding-right: 1rem;
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .home__content__data p {
@@ -14319,6 +14352,8 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .home__special {
@@ -14416,11 +14451,13 @@ a {
   padding-right: 1rem;
   border-right: 2px solid #c19463;
   margin-bottom: 2rem;
+  text-align: right;
 }
 
 .home__our_team a {
   display: inline-block;
   width: 200px;
+  max-width: 100%;
 }
 
 .home__our_team__item {
@@ -14516,8 +14553,15 @@ a {
   font-size: 1rem !important;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .home__our_team a {
+    font-size: 0.9rem;
+  }
+}
+
 .home__media {
-  padding: 5rem 0;
+  padding-top: 4rem;
+  padding-bottom: 0;
 }
 
 .home__media .title {
@@ -14577,6 +14621,7 @@ a {
 
 .home__news__item {
   padding-bottom: 0.5rem;
+  max-width: 400px;
 }
 
 .home__news__item__img {
@@ -14590,6 +14635,11 @@ a {
   -ms-transition: all 0.4s ease-out;
   -webkit-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .home__news__item .title {
@@ -14618,6 +14668,15 @@ a {
 .home__news__item:hover img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.home__news .owl-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -15004,6 +15063,7 @@ a {
   display: flex;
   background-color: transparent !important;
   color: #ffffff;
+  border-top: unset !important;
 }
 
 .country__tables__wrapper .wptb-preview-table tr:not(:last-child),
@@ -15025,9 +15085,26 @@ a {
 .country__tables__wrapper__table tr .key,
 .country__tables__wrapper__table .table-row td:first-child,
 .country__tables__wrapper__table .table-row .key {
+  width: 70% !important;
   border: none !important;
   border-left: 1px solid #c19463 !important;
   padding: 1.5rem 1rem !important;
+  font-size: 1rem !important;
+  font-weight: 200 !important;
+  color: #fafafa !important;
+}
+
+.country__tables__wrapper .wptb-preview-table tr td:first-child p,
+.country__tables__wrapper .wptb-preview-table tr .key p,
+.country__tables__wrapper .wptb-preview-table .table-row td:first-child p,
+.country__tables__wrapper .wptb-preview-table .table-row .key p,
+.country__tables__wrapper table tr td:first-child p,
+.country__tables__wrapper table tr .key p,
+.country__tables__wrapper table .table-row td:first-child p,
+.country__tables__wrapper table .table-row .key p, .country__tables__wrapper__table tr td:first-child p,
+.country__tables__wrapper__table tr .key p,
+.country__tables__wrapper__table .table-row td:first-child p,
+.country__tables__wrapper__table .table-row .key p {
   font-size: 1rem !important;
   font-weight: 200 !important;
   color: #fafafa !important;
@@ -15044,33 +15121,34 @@ a {
 .country__tables__wrapper__table tr .value,
 .country__tables__wrapper__table .table-row td:last-child,
 .country__tables__wrapper__table .table-row .value {
+  width: 30% !important;
   border: none !important;
   padding: 1.5rem 1rem;
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
 }
 
-.country__tables__wrapper .wptb-preview-table tr .key,
-.country__tables__wrapper .wptb-preview-table .table-row .key,
-.country__tables__wrapper table tr .key,
-.country__tables__wrapper table .table-row .key, .country__tables__wrapper__table tr .key,
-.country__tables__wrapper__table .table-row .key {
-  width: 70%;
-}
-
-.country__tables__wrapper .wptb-preview-table tr .value,
-.country__tables__wrapper .wptb-preview-table .table-row .value,
-.country__tables__wrapper table tr .value,
-.country__tables__wrapper table .table-row .value, .country__tables__wrapper__table tr .value,
-.country__tables__wrapper__table .table-row .value {
-  width: 30%;
+.country__tables__wrapper .wptb-preview-table tr td:last-child p,
+.country__tables__wrapper .wptb-preview-table tr .value p,
+.country__tables__wrapper .wptb-preview-table .table-row td:last-child p,
+.country__tables__wrapper .wptb-preview-table .table-row .value p,
+.country__tables__wrapper table tr td:last-child p,
+.country__tables__wrapper table tr .value p,
+.country__tables__wrapper table .table-row td:last-child p,
+.country__tables__wrapper table .table-row .value p, .country__tables__wrapper__table tr td:last-child p,
+.country__tables__wrapper__table tr .value p,
+.country__tables__wrapper__table .table-row td:last-child p,
+.country__tables__wrapper__table .table-row .value p {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
 }
 
 .country__tables__wrapper .wptb-preview-table tr .wptb-table-container-0 td:first-child,

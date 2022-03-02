@@ -23,10 +23,10 @@ Bayat.slider.init = function () {
         0: {
           items: 1,
         },
-        576: {
+        768: {
           items: 2,
         },
-        991: {
+        992: {
           items: 3,
         },
       },
@@ -56,7 +56,7 @@ Bayat.slider.init = function () {
           items: 4.5,
           center: true,
         },
-        991: {
+        992: {
           items: 11,
         },
       },
@@ -83,7 +83,7 @@ Bayat.slider.init = function () {
         576: {
           items: 3,
         },
-        991: {
+        992: {
           items: 4,
         },
       },
@@ -112,7 +112,7 @@ Bayat.slider.init = function () {
         576: {
           items: 2,
         },
-        991: {
+        992: {
           items: 3,
         },
       },
@@ -157,7 +157,7 @@ Bayat.slider.init = function () {
         576: {
           items: 2,
         },
-        991: {
+        992: {
           items: 3,
         },
         1200: {
@@ -220,7 +220,7 @@ Bayat.fixedHeader.init = function () {
 
           if (st > 1000) {
             if (!header.classList.contains("header__fixed")) {
-              if (window.innerWidth > 991) {
+              if (window.innerWidth > 992) {
                 header = document.querySelector(".home__header");
               } else {
                 header = document.querySelector(".header__mobile");
@@ -233,7 +233,7 @@ Bayat.fixedHeader.init = function () {
             }
           } else {
             if (header.classList.contains("header__fixed")) {
-              if (window.innerWidth > 991) {
+              if (window.innerWidth > 992) {
                 header = document.querySelector(".home__header");
               } else {
                 header = document.querySelector(".header__mobile");
