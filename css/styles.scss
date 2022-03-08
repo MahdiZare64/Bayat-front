@@ -3320,3 +3320,21 @@
     }
   }
 }
+
+.list-table {
+  .list-group  {
+    background-color: $primary_color;
+    border: 1px solid $third_color;
+    border-radius: 1rem;
+
+    .list-group-item {
+      background-color: $primary_color;
+      color: $white_color;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $third_color;
+      }
+
+    }
+  }
+}

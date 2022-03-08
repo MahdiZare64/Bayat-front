@@ -26,20 +26,11 @@ table {
     color: $white_color !important;
     border: unset !important;
 
-    &:not(:last-child) {
-      td {
-        border-bottom: 1px solid $third_color !important;
-        border-top: unset !important;
-      }
-    }
-
-    &:last-child {
-      border: unset !important;
-    }
-
     td {
+      border: unset !important;
       .wptb-text-container {
         height: 100% !important;
+        width: 100% !important;
         display: flex !important;
         align-items: center !important;
       }
@@ -55,7 +46,8 @@ table {
           font-size: 1rem !important;
           font-weight: 200 !important;
           color: $figma_text !important;
-          text-align: right !important;
+          text-align: center !important;
+          width: 100% !important;
         }
       }
 
@@ -71,9 +63,20 @@ table {
           font-size: 1rem !important;
           font-weight: 700 !important;
           color: $white_color !important;
-          text-align: right !important;
+          text-align: center !important;
+          width: 100% !important;
         }
       }
+    }
+
+    &:not(:last-child) {
+      td {
+        border-bottom: 1px solid $third_color !important;
+      }
+    }
+
+    &:last-child {
+      border: unset !important;
     }
   }
 }

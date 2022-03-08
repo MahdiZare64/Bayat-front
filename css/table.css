@@ -14,17 +14,13 @@ table tr {
   border: unset !important;
 }
 
-table tr:not(:last-child) td {
-  border-bottom: 1px solid #c19463 !important;
-  border-top: unset !important;
-}
-
-table tr:last-child {
+table tr td {
   border: unset !important;
 }
 
 table tr td .wptb-text-container {
   height: 100% !important;
+  width: 100% !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -45,7 +41,8 @@ table tr td:first-child p {
   font-size: 1rem !important;
   font-weight: 200 !important;
   color: #fafafa !important;
-  text-align: right !important;
+  text-align: center !important;
+  width: 100% !important;
 }
 
 table tr td:last-child {
@@ -65,6 +62,15 @@ table tr td:last-child p {
   font-size: 1rem !important;
   font-weight: 700 !important;
   color: #ffffff !important;
-  text-align: right !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+table tr:not(:last-child) td {
+  border-bottom: 1px solid #c19463 !important;
+}
+
+table tr:last-child {
+  border: unset !important;
 }
 /*# sourceMappingURL=table.css.map */

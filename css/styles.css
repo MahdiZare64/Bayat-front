@@ -16261,4 +16261,19 @@ a {
     text-align: center;
   }
 }
+
+.list-table .list-group {
+  background-color: #0a0e3e;
+  border: 1px solid #c19463;
+  border-radius: 1rem;
+}
+
+.list-table .list-group .list-group-item {
+  background-color: #0a0e3e;
+  color: #ffffff;
+}
+
+.list-table .list-group .list-group-item:not(:last-child) {
+  border-bottom: 1px solid #c19463;
+}
 /*# sourceMappingURL=styles.css.map */
